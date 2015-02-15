@@ -1,11 +1,9 @@
 extends layout.jade
 
 block content
-	h1= account.name
-	h3= account.username
-	div.row
-	each item in images
-		div.two.columns
-			a(href='/note/view/'+item.id,title:item.context.title)
-				- var url = item.medias[0].link.replace('upload/','upload/w_50,h_50,c_fill/')
-				img(src=url)
+	h4 #{even.type} by #{even.actor.login}
+
+	h6 Repo: #{even.repo.name} 
+	h6 Created at: #{even.created_at}
+	h6  Public: #{even.public}
+

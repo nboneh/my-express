@@ -1,5 +1,8 @@
 extends layout
 
 block content
-    h1= context.title
-    h3= context.description
+	h4 #{issue.title} by #{issue.user.login}
+
+	h6 State: #{issue.state} 
+	h6 Created at: #{issue.created_at}
+	h6  Last updated: #{issue.updated_at}
