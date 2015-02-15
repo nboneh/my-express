@@ -1,0 +1,11 @@
+extends layout.jade
+
+block content
+	h1= account.name
+	h3= account.username
+	div.row
+	each item in images
+		div.two.columns
+			a(href='/note/view/'+item.id,title:item.context.title)
+				- var url = item.medias[0].link.replace('upload/','upload/w_50,h_50,c_fill/')
+				img(src=url)
